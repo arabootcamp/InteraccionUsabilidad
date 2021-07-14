@@ -14,12 +14,349 @@ html {
 
 .sky {
   width: 100%;
-  height: calc(0.67*100vh);
+  height: 67vh;
   background-color: #7cc4e4;
+  color: white;
+  padding-top: calc(0.10*67vh);
+  position: relative;
 }
 
 .earth {
   width: 100%;
-  height: calc(0.33*100vh);
+  height: 33vh;
   background-color: #f3e9d9;
+  position: relative;
+}
+
+@keyframes sun {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.sun {
+  width: 250px;
+  height: auto;
+  margin-left: 6vw;
+  animation-name: sun;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+    font-weight: 800;
+  }
+
+  50% {
+    opacity: 0;
+    font-weight: 800;
+  }
+
+  70% {
+    font-weight: 900;
+    opacity: 1;
+  }
+
+  100% {
+    font-weight: 900;
+    opacity: 1;
+  }
+}
+
+.sky__title {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  animation-name: title;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes paragraph {
+  0% {
+    opacity: 0;
+    font-weight: 500;
+  }
+
+  50% {
+    opacity: 0;
+    font-weight: 500;
+  }
+
+  70% {
+    font-weight: 300;
+    opacity: 1;
+  }
+
+  100% {
+    font-weight: 300;
+    opacity: 1;
+  }
+}
+
+.sky__p {
+  animation-name: paragraph;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  margin: 0 6vw;
+  z-index: 100;
+}
+
+.palm {
+  width: 160px;
+  height: auto;
+  position: absolute;
+  top: -90px;
+  left: 50%;
+
+}
+
+@keyframes trunk {
+
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.trunk {
+  animation-name: trunk;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes coconut {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.coconut {
+  animation-name: coconut;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes left {
+
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.left {
+  animation-name: left;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes umbrella {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  70% {
+    transform: translate(200px, 0);
+  }
+
+  100% {
+    transform: translate(200px, 0);
+  }
+}
+
+.umbrella {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: -150px;
+  animation-name: umbrella;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ball {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  70% {
+    transform: translate(-200px, 0);
+  }
+
+  100% {
+    transform: translate(-200px, 0);
+  }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc(33vh/3);
+  right: -50px;
+  animation-name: ball;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ball-inner {
+
+  0% {
+    fill: white;
+  }
+
+  70% {
+    fill: white;
+  }
+
+  100% {
+    fill: #f3d55b;
+  }
+}
+
+.ball__inner-color {
+  animation-name: ball-inner;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.woman {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  right: 10vw;
+  bottom: 0;
+}
+
+@keyframes flower-right {
+
+  0% {
+    fill: #ffd640;
+  }
+
+  50% {
+    fill: white;
+  }
+
+  75% {
+    fill: white;
+  }
+
+  90% {
+    fill: #ffd640;
+  }
+
+  100% {
+    fill: #ffd640;
+  }
+}
+
+.flower-right {
+  animation-name: flower-right;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flower-left {
+
+  0% {
+    fill: #fff666;
+  }
+
+  50% {
+    fill: #fff666;
+  }
+
+  75% {
+    fill: white;
+  }
+
+  90% {
+    fill: #fff666;
+  }
+
+  100% {
+    fill: #fff666;
+  }
+}
+
+.flower-left {
+  animation-name: flower-left;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dress-left {
+
+  0% {
+    fill: #9ce072;
+  }
+
+  67% {
+    fill: white;
+  }
+
+  70% {
+    fill: white;
+  }
+
+  100% {
+    fill: #9ce072;
+  }
+}
+
+.dress-left {
+  animation-name: dress-left;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
